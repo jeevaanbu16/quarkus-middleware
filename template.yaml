@@ -93,7 +93,7 @@ spec:
         enum:
         - ../../../skeletons/github-actions/
         - ../../../skeletons/tekton/
-        - ../../../skeletons/jenkins/
+        - ./skeletons/jenkins/
         enumNames:
         - GitHub Action
         - Tekton
@@ -132,7 +132,7 @@ spec:
               description: The namespace for deploying resources
         - properties:
             ci:
-              const: ../../../skeletons/jenkins/
+              const: ./skeletons/jenkins/
             jenkinsfile:
               title: Jenkinsfile Path
               type: string
@@ -193,7 +193,7 @@ spec:
     name: Generating the Catalog Info Component
     action: fetch:template
     input:
-      url: ../../../skeletons/catalog-info/
+      url: ./skeletons/catalog-info/
       values:
         orgName: ${{ parameters.orgName }}
         repoName: ${{ parameters.repoName }}
